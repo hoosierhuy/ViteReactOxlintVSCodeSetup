@@ -1,0 +1,39 @@
+{
+  "files": ["**/*.{js,jsx,ts,tsx}"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "parser": {
+    "typescript": true,
+    "jsx": true
+  },
+  "settings": {
+    "jsx": {
+      "pragma": "React",
+      "fragment": "Fragment",
+      "version": "detect"
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "jsx-a11y": "warn",
+    "react": "warn",
+    "import": "warn",
+    "typescript": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "ignore": [
+    "dist",
+    "node_modules/**",
+    "*.config.js",
+    "*.config.ts",
+    "*.config.mjs",
+    "vite.config.*",
+    "tsconfig*.json"
+  ]
+}
