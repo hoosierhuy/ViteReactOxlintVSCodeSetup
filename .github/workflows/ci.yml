@@ -29,7 +29,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run Oxlint
-        run: pnpm run lint
+        run: npx --yes oxlint@1.15.0 src/ --deny-warnings --type-aware
 
       - name: Check TypeScript
         run: pnpm run build
