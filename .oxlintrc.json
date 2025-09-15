@@ -1,13 +1,11 @@
 {
-  "files": ["**/*.{js,jsx,ts,tsx}"],
   "env": {
     "browser": true,
     "node": true,
     "es2024": true
   },
-  "parser": {
-    "typescript": true,
-    "jsx": true
+  "globals": {
+    "React": "readonly"
   },
   "settings": {
     "jsx": {
@@ -19,15 +17,16 @@
       "version": "detect"
     }
   },
+  "plugins": ["react", "jsx-a11y", "import", "typescript"],
   "rules": {
-    "jsx-a11y": "warn",
-    "react": "warn",
-    "import": "warn",
-    "typescript": "warn",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off"
   },
-  "ignore": [
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "ignorePatterns": [
     "dist",
     "node_modules/**",
     "*.config.js",
